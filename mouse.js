@@ -14,7 +14,7 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       eval(textarea.value);
       para.textContent = 'The rectangle is ' + x + 'px wide and ' + y + 'px high.';
-      start.focus=true;
+      
     }
 
     reset.addEventListener('click', function() {
@@ -24,7 +24,13 @@
     
 
     start.addEventListener('click', drawCanvas);
-    window.addEventListener('load', drawCanvas);
+    window.addEventListener('load', ()=>{
+      textarea.value =`
+let x =50;
+let y =50;
+ctx.fillStyle ="green";
+ctx.fillRect(10,10,x,y);`;
+    });
 
     // stop tab key tabbing out of textarea and
     // make it write a tab at the caret position instead
