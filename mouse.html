@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일공이사</title>
+    <link rel="stylesheet" href="mouse.css">
+</head>
+<body>
+    
+    <h2>Live output</h2>
+    <canvas id="canvas" width="400" height="250" class="playable-canvas">
+    </canvas>
+
+    <p>The rectangle is 50px wide and 50px high.</p>
+
+    <h2>Editable code</h2>
+    <p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+    <textarea id="code" class="playable-code" >
+      let x =50;
+      let y =50;
+        ctx.fillStyle ="green";
+      ctx.fillRect(10,10,x,y);
+    </textarea>
+
+    <div class="playable-buttons">
+      <input type="button" value="start" id="start">
+      <input id="reset" type="button" value="Reset">
+    </div>
+  
+
+    <script src="mouse.js"></script>
+</body>
+</html>
